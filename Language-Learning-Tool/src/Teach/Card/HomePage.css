@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 10px;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px; /* Reduced gap between grid items */
+    justify-items: center;
+    align-items: start;
+    margin-left: 200px;
+}
+
+.header {
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.language-select {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.language-select label {
+    margin-right: 10px;
+    color: black;
+}
+
+.language-select select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2px; /* Further reduced gap for medium screens */
+        margin-left: 280px;
+    }
+
+    .grid-item {
+        width: 180px;
+        height: 180px;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px; /* Reduced gap for smaller screens */
+        margin-left: 200px;
+    }
+
+    .grid-item {
+        width: 160px;
+        height: 160px;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2px; /* Maintain smaller gap on mobile screens */
+        margin-left: 180px;
+    }
+
+    .grid-item {
+        width: 140px;
+        height: 140px;
+    }
+
+    .grid-item img {
+        max-width: 100%;
+    }
+}
+

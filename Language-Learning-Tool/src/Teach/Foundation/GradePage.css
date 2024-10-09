@@ -1,0 +1,110 @@
+.grade-container {
+  display: flex;
+  justify-content: flex-start; /* Keep the container aligned to the left */
+  align-items: center;
+  height: 100vh;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px 60px; /* Increased overall padding for more space */
+  padding-right: 200px; /* Increased padding on the right for more space */
+  background-color: transparent;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start; /* Align main content to the left */
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two cards per row */
+  gap: 80px; /* Increased space between the cards */
+  justify-items: flex-start; /* Align items in the grid to the left */
+  max-width: 1400px; /* Increased max width for a wider layout */
+  margin-left: -200px; /* Move the entire grid further left */
+  margin-right: 100px; /* Add margin to the right for spacing */
+}
+
+.header1 {
+  display: flex;
+  justify-content: flex-start; /* Move header to the left side */
+  align-items: center;
+  margin-bottom: 40px;
+  text-align: left; /* Align the text within the header to the left */
+  padding-left: 60px; /* Optional: Add some left padding if needed */
+}
+
+.header1 h2 {
+  font-size: 26px; /* Keep the increased font size for the header */
+  font-weight: bold;
+}
+.sidebar {
+  margin-right: 120px; /* Increased margin to the right of the sidebar */
+}
+
+.content-item {
+  background-color: #d3d3d3;
+  padding: 120px 160px; /* Increased padding for larger cards */
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1100px; /* Increased max width of the cards */
+  height: 450px; /* Increased height for larger cards */
+}
+
+.content-item:hover {
+  transform: translateY(-5px);
+}
+
+.content-item h3 {
+  margin: 0 0 20px 0;
+  font-size: 28px; /* Larger font size for card titles */
+  font-weight: bold;
+}
+
+.content-item-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.content-item img {
+  width: 200px; /* Increased image width */
+  height: 200px; /* Increased image height */
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.content-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.content-item ul li {
+  margin-bottom: 10px; /* Increased spacing between list items */
+  font-size: 22px; /* Larger font size for the list */
+  color: #000;
+}
+
+.content-item ul li::before {
+  content: "•";
+  color: #3a2e85;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.content-item ul li[style] {
+  cursor: pointer;
+  color: black;
+  text-decoration: underline;
+}

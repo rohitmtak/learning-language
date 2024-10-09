@@ -1,0 +1,119 @@
+.sidebar {
+    width: 320px; /* Increased sidebar width */
+    background-color: #3a2e85; 
+    background-image: url('../assets/page4Images/Asset 153@4x.png'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    padding: 40px 20px; /* Increased padding */
+    position: fixed; 
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+/* Sidebar Logo */
+.sidebar-logo {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar-logo img {
+    width: 95%; /* Further increased logo size */
+    height: auto;
+    z-index: 1;
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+/* Menu Item */
+.menu-item {
+    padding: 18px 14px; /* Increased padding for menu items */
+    cursor: pointer;
+    font-size: 22px; /* Increased font size */
+    color: #f5e33d;
+    margin-bottom: 12px; /* Increased margin for better spacing */
+    z-index: 1;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    background-color: #5e4fa2; 
+    border-radius: 8px;
+}
+
+/* Bottom Image */
+.sidebar-bottom-image {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    z-index: 1;
+}
+
+.sidebar-bottom-image img {
+    width: 70%; /* Increased bottom image size */
+    height: auto;
+    margin-top: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 280px; /* Increased width for mid-sized screens */
+        padding: 30px 15px;
+    }
+
+    .sidebar-logo img,
+    .sidebar-bottom-image img {
+        width: 90%; /* Adjust size for mid-sized screens */
+    }
+
+    .menu-item {
+        font-size: 20px; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 260px; /* Increased sidebar width for tablet-sized screens */
+        padding: 25px 15px;
+    }
+
+    .sidebar-logo img,
+    .sidebar-bottom-image img {
+        width: 85%; /* Adjust size */
+    }
+
+    .menu-item {
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 240px; /* Increased sidebar width for mobile screens */
+        padding: 20px 10px;
+    }
+
+    .sidebar-logo img,
+    .sidebar-bottom-image img {
+        width: 80%; /* Further reduce size for smaller screens */
+    }
+
+    .menu-item {
+        font-size: 16px; 
+    }
+}
